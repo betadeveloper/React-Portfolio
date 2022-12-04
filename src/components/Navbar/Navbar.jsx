@@ -33,7 +33,7 @@ const Navbar = () => {
             <HiX onClick={() => setToggle(false)} />
             <ul className='app__navbar-links'>
               {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-                <li className='app__flex p-text' key={{ item }}>
+                <li className='app__flex p-text'>
                   <div></div>{' '}
                   <a onClick={() => setToggle(false)} href={`#${item}`}>
                     {item}
