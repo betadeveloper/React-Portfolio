@@ -41,21 +41,21 @@ const Footer = () => {
       <h2 className='head-text'>Contact Me 😊</h2>
 
       <div className='app__footer-cards'>
-        <div className='app__footer-card '>
-          <img src={images.email} alt='email' />
-          <a href='mailto:raitaut@gmail.com' className='p-text'>
+        <a href='mailto:raitaut@gmail.com' className='p-text'>
+          <div className='app__footer-card '>
+            <img src={images.email} alt='email' />
             raitaut@gmail.com
-          </a>
-        </div>
-        <div className='app__footer-card'>
-          <img src={images.linkedin} alt='LinkedIn' />
-          <a
-            href='https://www.linkedin.com/in/raigardas-tautkus/'
-            className='p-text'
-          >
+          </div>
+        </a>
+        <a
+          href='https://www.linkedin.com/in/raigardas-tautkus/'
+          className='p-text'
+        >
+          <div className='app__footer-card'>
+            <img src={images.linkedin} alt='LinkedIn' />
             LinkedIn
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
       {!isFormSubmitted ? (
         <div className='app__footer-form app__flex'>
