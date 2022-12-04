@@ -58,15 +58,21 @@ const Footer = () => {
         </a>
       </div>
       {!isFormSubmitted ? (
-        <div className='app__footer-form app__flex'>
+        <form
+          className='app__footer-form app__flex'
+          action='https://formspree.io/xnqgvyqn'
+          method='POST'
+          target='_blank'
+        >
           <div className='app__flex'>
             <input
-              className='p-text'
+              className='p-text feedback-input'
               type='text'
               placeholder='Your Name'
-              name='username'
+              name='Name'
               value={username}
               onChange={handleChangeInput}
+              required
             />
           </div>
           <div className='app__flex'>
@@ -77,6 +83,7 @@ const Footer = () => {
               name='email'
               value={email}
               onChange={handleChangeInput}
+              required
             />
           </div>
           <div>
@@ -86,12 +93,18 @@ const Footer = () => {
               value={message}
               name='message'
               onChange={handleChangeInput}
+              required
             />
           </div>
-          <button type='button' className='p-text' onClick={handleSubmit}>
+          <button
+            type='submit'
+            className='p-text'
+            onClick={handleSubmit}
+            value='SUBMIT'
+          >
             {!loading ? 'Send Message' : 'Sending...'}
           </button>
-        </div>
+        </form>
       ) : (
         <div>
           <h3 className='head-text'>Thank you for getting in touch!</h3>
