@@ -20,7 +20,7 @@ const scaleVariants = {
 const Header = () => (
   <Parallax
     bgImage={headerimg}
-    bgImageAlt='the cat'
+    bgImageAlt='headerParallax'
     strength={800}
     className='img'
     blur={1}
