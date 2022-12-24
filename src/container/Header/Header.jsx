@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Parallax } from 'react-parallax'
-import headerimg from './headerimg.jpg'
+import headerimg from './headerimg.webp'
 
 import { images } from '../../constants'
 import './Header.scss'
@@ -21,14 +21,14 @@ const Header = () => (
   <Parallax
     bgImage={headerimg}
     bgImageAlt='headerParallax'
-    strength={800}
+    strength={500}
     className='img'
     blur={1}
   >
     <div className='app__header app__flex' id='home'>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.3 }}
         className='app__header-info'
       >
         <div className='app__header-badge'>
@@ -48,13 +48,13 @@ const Header = () => (
 
       <motion.div
         whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 0.5, delayChildren: 0.5 }}
+        transition={{ duration: 0.3, delayChildren: 0.5 }}
         className='app__header-img'
       >
         <img src={images.profilesvg} alt='profile_bg' />
         <motion.img
           whileInView={{ scale: [0, 1] }}
-          transition={{ duration: 1, ease: 'easeInOut' }}
+          transition={{ duration: 0.75, ease: 'easeInOut' }}
           src={images.circle}
           alt='profile_circle'
           className='overlay_circle'
